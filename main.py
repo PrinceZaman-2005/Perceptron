@@ -1,10 +1,9 @@
 from examples.and_gate import run_and_gate
+from examples.or_gate import run_or_gate
 
 
-def main():
-    X, y, predictions, model = run_and_gate()
-
-    print("Perceptron - AND Gate")
+def display_results(name, X, y, predictions, model):
+    print(f"Perceptron - {name} Gate")
     print("=" * 30)
 
     for inputs, target, prediction in zip(X, y, predictions):
@@ -16,6 +15,17 @@ def main():
 
     print("\nWeights:", model.weights)
     print("Bias:", model.bias)
+    print()
+
+
+def main():
+    # Run AND gate
+    X, y, predictions, model = run_and_gate()
+    display_results("AND", X, y, predictions, model)
+
+    # Run OR gate
+    X, y, predictions, model = run_or_gate()
+    display_results("OR", X, y, predictions, model)
 
 
 if __name__ == "__main__":
