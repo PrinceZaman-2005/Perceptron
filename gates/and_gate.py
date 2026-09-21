@@ -1,6 +1,6 @@
 import numpy as np
 
-from src.perceptron import Perceptron
+from core.perceptron import Perceptron
 
 
 def run_and_gate():
