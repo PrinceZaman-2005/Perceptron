@@ -1,5 +1,5 @@
-from examples.and_gate import run_and_gate
-from examples.or_gate import run_or_gate
+from gates.and_gate import run_and_gate
+from gates.or_gate import run_or_gate
 
 
 def display_results(name, X, y, predictions, model):
